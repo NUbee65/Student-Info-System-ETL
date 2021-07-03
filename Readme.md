@@ -17,8 +17,8 @@ Database**
 **  
 **
 
-**Salesforce Schema Builder Diagram Used to Map and Recreate GWSIS Database
-Using Salesforce Objects (Tables)**
+**Salesforce Schema Builder Diagram Used to Generate, Map and Recreate GWSIS
+Database Using Salesforce Objects (Tables)**
 
 ![](media/0f127859621ec7491000fc558c76eaec.png)
 
