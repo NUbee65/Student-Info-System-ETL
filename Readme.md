@@ -9,7 +9,7 @@ even configuration of Salesforce
 The repository does not contain the live website. That website can be reached at
 <https://cooperassetmanagement-dev-ed.lightning.force.com/lightning/page/home>.
 
-**DbVisualizer ERD Diagram Used to Reverse Engineer MySQL on AWS GWSIS
+**MySQL Workbench ERD Diagram Used to Reverse Engineer MySQL on AWS GWSIS
 Database**
 
 ![](media/c1aeaa4db54ae5aa24c4113f232fea51.png)
