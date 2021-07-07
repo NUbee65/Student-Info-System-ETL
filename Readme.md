@@ -28,6 +28,49 @@ Database Using Salesforce Objects (Tables)**
 **Python Scripts Used to Effect the ETL – This Particular Section Relating to
 Staff & Staff Assignment Tables and the Joint Lookup Tables**
 
+We effectively started with an SQL database in MySQL and replicated it as an SQL
+database in Salesforce. This required coding a series of logical scripts using
+both Python and SQL.
+
+From the source GWSIS database, we gathered the following data:
+
+-   Relationships between the tables
+
+-   Fields that are unique for each record with a given table (primary keys)
+
+-   Fields that are common between the tables (foreign keys)
+
+-   One-to-one, one-to-many, and many-to-many relationships
+
+-   Tables that serve as lookup tables
+
+This information informs how we reconstruct in Salesforce (or, for that matter,
+any other SQL database):
+
+-   One cannot simply copy individual table data over and expect the new target
+    tables (1) to act coherently as a useful database and (2) to maintain
+    referential integrity of the dataset
+
+-   Rather, one must start replicate all the relationships and rules that govern
+    the source database tables and dataset structures in setting up empty tables
+    and dataset structures in the target database.
+
+-   In order to assure that the linkages persist across database replication,
+    one must execute (1) one or more database joins first between tables in the
+    source database and (2) database joins between tables in the source and
+    target databases. This ensures that unique identifiers and data structures
+    are preserved across the records that are established in the new database.
+
+-   For clarity’s sake, what I mean is that unique record IDs are automatically
+    created fresh in Salesforce (target database) that are wholly different from
+    the unique record IDs that were automatically created in MySQL (the source
+    database). So, we are therefore forced to create a logic that preserves the
+    dataset structure with certainty. And that is the basis for the multiple
+    table joins detailed above.
+
+-   All of the above dictates the order of creating tables and defining their
+    structures and in replicating records from source to target database.
+
 **![](media/e3115374b834f3691383270655dcab7f.png)**
 
 **  
