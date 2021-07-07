@@ -51,9 +51,9 @@ any other SQL database):
     tables (1) to act coherently as a useful database and (2) to maintain
     referential integrity of the dataset
 
--   Rather, one must start replicate all the relationships and rules that govern
-    the source database tables and dataset structures in setting up empty tables
-    and dataset structures in the target database.
+-   Rather, one must start by replicating all the relationships and rules that
+    govern the source database tables and dataset structures in setting up empty
+    tables and dataset structures in the target database.
 
 -   In order to assure that the linkages persist across database replication,
     one must execute (1) one or more database joins first between tables in the
